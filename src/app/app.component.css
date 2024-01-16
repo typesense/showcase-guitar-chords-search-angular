@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(3rem + 3.5vmax) 1rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+.ais-instantsearch {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 2rem;
+  min-height: 474px;
+}
+app-infinite-hits {
+  flex: 1;
+}

@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:typesense": "docker compose up",
+    "index:typesense": "npx tsx ./scripts/indexTypesense.ts"
   },
   "private": true,
   "dependencies": {
@@ -18,8 +20,11 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "angular-instantsearch": "^4.4.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "typesense": "^1.7.2",
+    "typesense-instantsearch-adapter": "^2.7.1",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {

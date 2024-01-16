@@ -1,0 +1,15 @@
+<aside class="SearchAndFilter">
+  <h3>Key</h3>
+  <ais-refinement-list attribute="key" [sortBy]="['name']" />
+  <h3>Suffix</h3>
+  <ais-refinement-list
+    attribute="suffix"
+    [showMore]="true"
+    [limit]="8"
+    [showMoreLimit]="100"
+    [searchable]="true"
+    searchPlaceholder="Search suffixes..."
+  />
+  <h3>Capo</h3>
+  <ais-refinement-list attribute="positions.capo" />
+</aside>

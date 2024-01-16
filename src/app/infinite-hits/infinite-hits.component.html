@@ -1,0 +1,21 @@
+<ais-infinite-hits>
+  <ng-template
+    let-hits="hits"
+    let-results="results"
+    let-refineNext="showMore"
+    let-isLastPage="isLastPage"
+  >
+    <ol class="ais-InfiniteHits-list">
+      <li *ngFor="let hit of hits" class="ais-InfiniteHits-item">
+        {{ hit.key + hit.suffix }}
+      </li>
+    </ol>
+    <button
+      class="ais-InfiniteHits-loadMore"
+      (click)="refineNext($event)"
+      [disabled]="isLastPage"
+    >
+      Show More
+    </button>
+  </ng-template>
+</ais-infinite-hits>
