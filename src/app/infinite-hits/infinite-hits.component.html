@@ -7,7 +7,17 @@
   >
     <ol class="ais-InfiniteHits-list">
       <li *ngFor="let hit of hits" class="ais-InfiniteHits-item">
-        {{ hit.key + hit.suffix }}
+        <h2 class="chord_name">{{ hit.key + hit.suffix }}</h2>
+        <div id="myReactComponentContainer">
+          <app-draw-chord [chordPosition]="hit.positions[0]"></app-draw-chord>
+        </div>
+
+        <div *ngIf="hit.positions.length > 1; else elseBlock" class="posCount">
+          {{ hit.positions.length + " positions" }}
+        </div>
+        <ng-template #elseBlock
+          ><div class="posCount">1 position</div></ng-template
+        >
       </li>
     </ol>
     <button
