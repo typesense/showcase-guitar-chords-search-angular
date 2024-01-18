@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:typesense": "docker compose up",
-    "index:typesense": "npx tsx ./scripts/indexTypesense.ts"
+    "index:typesense": "npx tsx ./scripts/indexTypesense.ts",
+    "cypress:open": "cypress open"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "@types/jasmine": "~4.3.0",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "cypress": "^13.6.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
