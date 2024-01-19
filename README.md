@@ -28,7 +28,11 @@ The guitar chord dataset & chord svg generation is from <a href="https://github.
 
 ## Development
 
-To run this project locally, make sure you have docker and nodejs, install the dependencies and run the local server:
+To run this project locally, make sure you have `@angular/cli` version 15, docker and nodejs.
+
+```shell
+npm install -g @angular/cli@v15-lts
+```
 
 Installation
 
