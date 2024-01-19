@@ -41,6 +41,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-*/environments
+
 
 /typesense-data
+# files contain secrets
+.env
+src/environments/*

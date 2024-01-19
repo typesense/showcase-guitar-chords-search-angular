@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
 
 const adapter = new TypesenseInstantSearchAdapter({
