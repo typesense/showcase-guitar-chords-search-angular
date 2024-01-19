@@ -18,13 +18,13 @@
   display: flex;
   align-items: center;
   position: relative;
-  button {
-    padding: 0 0.75rem 0 0.5rem;
-    background-color: #fff0;
-    border: none;
-    position: absolute;
-    right: 0;
-  }
+}
+.ais-SearchBox-form button {
+  padding: 0 0.75rem 0 0.5rem;
+  background-color: #fff0;
+  border: none;
+  position: absolute;
+  right: 0;
 }
 .ais-SearchBox-loadingIndicator {
   display: none !important;
@@ -37,9 +37,9 @@
   border: 1px solid var(--400);
   padding: 0 1rem 0 0.5rem;
   color: var(--700);
-  &::-webkit-search-cancel-button {
-    display: none;
-  }
+}
+.ais-SearchBox-input::-webkit-search-cancel-button {
+  display: none;
 }
 .ais-SearchBox-submit {
   display: none;

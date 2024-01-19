@@ -17,9 +17,9 @@
   flex-direction: column;
   align-items: center;
   animation: fadeUp 0.75s ease-out forwards;
-  svg {
-    max-width: 250px;
-  }
+}
+.ais-InfiniteHits-item svg {
+  max-width: 250px;
 }
 @keyframes fadeUp {
   0% {

@@ -30,12 +30,11 @@ h1 {
   position: fixed;
   top: 2vmax;
   right: 2vmax;
-  svg {
-    width: 28px;
-    height: 28px;
-  }
 }
-
+#githubLink svg {
+  width: 28px;
+  height: 28px;
+}
 @keyframes move {
   0% {
     transform: translate(0%) scale(1);
