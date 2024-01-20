@@ -89,6 +89,7 @@ Set env variables to point the app to the Typesense Cluster
 PUBLIC_TYPESENSE_SEARCH_ONLY=xxx
 PUBLIC_TYPESENSE_HOST=xxx.typesense.net
 PUBLIC_TYPESENSE_PORT=443
+PUBLIC_TYPESENSE_PROTOCOL=https
 ```
 
 The file `writeEnvVariables.ts` will automatically load them into `src/environments` for the angular app.
