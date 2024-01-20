@@ -1,27 +1,96 @@
-# TypesenseGuitarChordsAngular15
+<h1 align="center">
+ 🎸 Instant Guitar Chord Positions Search, powered by Typesense - Angular
+</h1>
+<div align="center">
+  <div><h3>Other versions</h3></div>
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-nuxt-js">NuxtJS</a> | 
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-next-js">NextJS</a> | 
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-angular">Angular 15</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-vanilla-js">Vanilla JS</a>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+## Tech Stack
 
-## Development server
+- <a href="https://github.com/typesense/typesense" target="_blank">Typesense</a>
+- Angular 15
+- Typescript
+- Cypress
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+All make for a blazingly fast search experience 🔥🔥🔥
 
-## Code scaffolding
+The guitar chord dataset & chord svg generation is from <a href="https://github.com/tombatossals/chords-db" target="_blank">tombatossals</a> which contains 2141 chord shapes of 552 chords.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Repo structure
 
-## Build
+- `src/app` contains UI components
+- `scripts/` contains file to index data from `scripts/data` into Typesense
+- `writeEnvVariables.ts` util script to write env variables at build time
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Development
 
-## Running unit tests
+To run this project locally, make sure you have `@angular/cli` version 15, docker and nodejs.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+npm install -g @angular/cli@v15-lts
+```
 
-## Running end-to-end tests
+Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```shell
+git clone https://github.com/typesense/showcase-guitar-chords-search-angular.git
 
-## Further help
+cd showcase-guitar-chords-search-angular
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm i
+```
+
+Start typesense server
+
+```shell
+npm run start:typesense # or: docker compose up
+```
+
+Index data into typesense
+
+```shell
+npm run index:typesense
+```
+Generate angular env variables
+
+```shell
+ng generate environments
+```
+
+Then add this to your `src/environments/environment.development.ts`
+
+```typescript
+// change them if you want to use Typesense cloud cluster
+export const environment = {
+  PUBLIC_TYPESENSE_SEARCH_ONLY: null,
+  PUBLIC_TYPESENSE_HOST: null,
+  PUBLIC_TYPESENSE_PORT: '443',
+  PUBLIC_TYPESENSE_PROTOCOL: 'https'
+};
+
+```
+Start the dev web app
+
+```shell
+ng serve
+```
+
+Open http://localhost:4200/ to see the app ✌️
+
+## Deployment
+
+Set env variables to point the app to the Typesense Cluster
+
+```env
+PUBLIC_TYPESENSE_SEARCH_ONLY=xxx
+PUBLIC_TYPESENSE_HOST=xxx.typesense.net
+PUBLIC_TYPESENSE_PORT=443
+```
+
+The file `writeEnvVariables.ts` will automatically load them into `src/environments` for the angular app.
+
+
