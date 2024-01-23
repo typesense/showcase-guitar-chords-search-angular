@@ -1,6 +1,12 @@
 <aside class="SearchAndFilter">
   <h3>Key</h3>
-  <ais-refinement-list attribute="key" [sortBy]="['name']" />
+  <ais-refinement-list
+    attribute="key"
+    [sortBy]="['name']"
+    [showMore]="true"
+    [limit]="7"
+    [showMoreLimit]="100"
+  />
   <h3>Suffix</h3>
   <ais-refinement-list
     attribute="suffix"
