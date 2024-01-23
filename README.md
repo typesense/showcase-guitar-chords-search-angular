@@ -3,8 +3,8 @@
 </h1>
 <div align="center">
   <div><h3>Other versions</h3></div>
-  <a href="https://github.com/typesense/showcase-guitar-chords-search-nuxt-js">NuxtJS</a> | 
-  <a href="https://github.com/typesense/showcase-guitar-chords-search-next-js">NextJS</a> | 
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-nuxt-js">NuxtJS</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-next-js">NextJS</a> |
   <a href="https://github.com/typesense/showcase-guitar-chords-search-angular">Angular 15</a> |
   <a href="https://github.com/typesense/showcase-guitar-chords-search-vanilla-js">Vanilla JS</a>
 </div>
@@ -55,6 +55,7 @@ Index data into typesense
 ```shell
 npm run index:typesense
 ```
+
 Generate angular env variables
 
 ```shell
@@ -66,13 +67,13 @@ Then add this to your `src/environments/environment.development.ts`
 ```typescript
 // change them if you want to use Typesense cloud cluster
 export const environment = {
-  PUBLIC_TYPESENSE_SEARCH_ONLY: null,
+  PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY: null,
   PUBLIC_TYPESENSE_HOST: null,
-  PUBLIC_TYPESENSE_PORT: '443',
-  PUBLIC_TYPESENSE_PROTOCOL: 'https'
+  PUBLIC_TYPESENSE_PORT: "443",
+  PUBLIC_TYPESENSE_PROTOCOL: "https",
 };
-
 ```
+
 Start the dev web app
 
 ```shell
@@ -86,11 +87,10 @@ Open http://localhost:4200/ to see the app ✌️
 Set env variables to point the app to the Typesense Cluster
 
 ```env
-PUBLIC_TYPESENSE_SEARCH_ONLY=xxx
+PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY=xxx
 PUBLIC_TYPESENSE_HOST=xxx.typesense.net
 PUBLIC_TYPESENSE_PORT=443
+PUBLIC_TYPESENSE_PROTOCOL=https
 ```
 
 The file `writeEnvVariables.ts` will automatically load them into `src/environments` for the angular app.
-
-

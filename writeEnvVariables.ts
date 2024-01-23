@@ -10,7 +10,7 @@
   });
   // `environment.ts` file structure
   const envConfigFile = `export const environment = {
-    PUBLIC_TYPESENSE_SEARCH_ONLY: '${process.env['PUBLIC_TYPESENSE_SEARCH_ONLY']}',
+    PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY: '${process.env['PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY']}',
     PUBLIC_TYPESENSE_HOST: '${process.env['PUBLIC_TYPESENSE_HOST']}',
     PUBLIC_TYPESENSE_PORT: '${process.env['PUBLIC_TYPESENSE_PORT']}',
     PUBLIC_TYPESENSE_PROTOCOL: '${process.env['PUBLIC_TYPESENSE_PROTOCOL']}'
