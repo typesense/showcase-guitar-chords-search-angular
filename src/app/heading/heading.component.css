@@ -35,6 +35,13 @@ h1 {
   width: 28px;
   height: 28px;
 }
+
+#technology-logo {
+  width: calc(3.25vmax + 2rem);
+  aspect-ratio: 2500/679;
+  position: relative;
+  top: 0.35vmax;
+}
 @keyframes move {
   0% {
     transform: translate(0%) scale(1);
