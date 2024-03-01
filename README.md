@@ -6,7 +6,13 @@
   <a href="https://github.com/typesense/showcase-guitar-chords-search-nuxt-js">NuxtJS</a> |
   <a href="https://github.com/typesense/showcase-guitar-chords-search-next-js">NextJS</a> |
   <a href="https://github.com/typesense/showcase-guitar-chords-search-angular">Angular 15</a> |
-  <a href="https://github.com/typesense/showcase-guitar-chords-search-vanilla-js">Vanilla JS</a>
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-vanilla-js">Vanilla JS</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-astro">Astro</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-solid-js">SolidJS</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-remix">Remix</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-svelte-kit">Sveltekit</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-qwik">Qwik</a> |
+  <a href="https://github.com/typesense/showcase-guitar-chords-search-react-native">React Native</a>
 </div>
 
 ## Tech Stack
@@ -20,19 +26,25 @@ All make for a blazingly fast search experience 🔥🔥🔥
 
 The guitar chord dataset & chord svg generation is from <a href="https://github.com/tombatossals/chords-db" target="_blank">tombatossals</a> which contains 2141 chord shapes of 552 chords.
 
-## Repo structure
+## Project Structure
 
-- `src/app` contains UI components
-- `scripts/` contains file to index data from `scripts/data` into Typesense
-- `writeEnvVariables.ts` util script to write env variables at build time
+```bash
+/
+├── scripts/
+│   ├── data/
+│   │   ├── guitar.json
+│   │   └── schema.json
+│   └── indexTypesense.ts # script that index data from guitar.json into typesense server
+├── src/
+│   └── app/
+│       ├── UI components...
+│       └── app.component.ts # guitar chords search
+└── writeEnvVariables.ts # util script to write env variables at build time
+```
 
 ## Development
 
-To run this project locally, make sure you have `@angular/cli` version 15, docker and nodejs.
-
-```shell
-npm install -g @angular/cli@v15-lts
-```
+To run this project locally, make sure you have docker and nodejs.
 
 Installation
 
@@ -65,7 +77,7 @@ ng generate environments
 Then add this to your `src/environments/environment.development.ts`
 
 ```typescript
-// change them if you want to use Typesense cloud cluster
+// change them if you want to use Typesense cloud
 export const environment = {
   PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY: null,
   PUBLIC_TYPESENSE_HOST: null,
